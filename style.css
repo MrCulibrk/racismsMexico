@@ -1,10 +1,67 @@
-body{
-   padding: 0;
-   margin: 0;
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto', sans-serif */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0C0A0A;
+
 }
-.background{
+
+.background {
     background-image: url(images/background.png);
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
+}
+
+.quote {
+    height: 100vh;
+    width: 99vw;
+    padding-top: 2%;
+}
+
+.quote h1 {
+    color: white;
+    font-size: 40pt;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #161414;
+    
+}
+
+form {
+    padding: 2%;
+    color: white;
+    font-family: 'Roboto', sans-serif
+}
+
+label{
+    margin-left: 2%;
+}
+
+#name {
+    border: none;
+    width: 25%;
+    padding: 0.5%;
+    border-radius: 2px;
+    margin: 0 0 2% 2%;
+}
+
+#checkbox{
+    margin: 0 0 2% 2%;
+    width: 15px;
+    height: 15px;
+}
+
+#message{
+    margin: 0 0 2% 2%;
+}
+
+#button{
+    margin: 0 0 0 2%;
 }
