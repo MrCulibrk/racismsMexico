@@ -75,10 +75,12 @@ video{
 }
 
 #stories{
-    width: 80%;
+    width: 75%;
     margin: auto;
     color: white;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .storyLink{
@@ -91,13 +93,14 @@ video{
 }
 
 .story{
-    display: inline-block;
+    /*display: inline-block;*/
     text-align: left;
-    background-color: #110E0F;
+    background-color: #161414;
     margin: 10px;
-    padding: 0px 20px 10px 20px;
+    padding: 1px 20px 10px 20px;
     height: 200px;
     width: 200px;
+    text-overflow: ellipsis;
 }
 
 .storyMain{

@@ -69,8 +69,9 @@ if (!empty($_POST)) {
         <div id="stories">
             <?php foreach($stories as $story) : ?>
             <a class="storyLink" href="story.php?story=<?php echo($story['id']); ?>"><div class="story">
-                <h3><?php echo(htmlspecialchars($story['name'])); ?></h3>
-                <?php $message = substr($story['message'], 0, 175) . "..."; ?>
+                <?php $name = substr($story['name'], 0, 50); ?>
+                <h3><?php echo(htmlspecialchars($name)); ?></h3>
+                <?php $message = substr($story['message'], 0, 140) . "..."; ?>
                 <p><?php echo(htmlspecialchars($message)); ?></p>
             </div></a> 
             <?php endforeach; ?>
@@ -82,10 +83,10 @@ if (!empty($_POST)) {
         <div class="container">
             <form action="" method="post">
                 <label for="name">Your name</label><br>
-                <input type="text" id="name" name="name" placeholder="Leave open if anonymous"><br>
+                <input type="text" id="name" name="name" placeholder="Do not fill in if you wish to remain anonymous"><br>
 
                 <label for="message">What do you want to share?</label><br>
-                <textarea name="message" id="message" cols="100" rows="20"></textarea><br>
+                <textarea name="message" id="message" cols="100" rows="20" placeholder="Share your story"></textarea><br>
 
                 <input id="button" type="submit" value="Submit">
 
@@ -110,7 +111,7 @@ if (!empty($_POST)) {
             <div id="countries">
                 <div id="be">
                     <h4>Belgium: UNIA</h4>
-                    <p>0800 12 800</p>
+                    <p>(+32) 0800 12 800</p>
                     <a href="https://www.report.unia.be/en/report-it/where">Centre for Equal Opportunities</a>
                 </div>
                 <div id="mex">
@@ -121,8 +122,8 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="divFooter logos">
-            <img class="logo" src="images/tm_vignet_rgb.png" alt="logo tm">
-            <img id="logoTec" class="logo" src="images/Tecnológico_de_Monterrey_old.png" alt="logo tec">
+            <a target="_blank" href="https://www.thomasmore.be/"><img class="logo" src="images/tm_vignet_rgb.png" alt="logo tm"></a> 
+            <a target="_blank" href="https://tec.mx/en"><img id="logoTec" class="logo" src="images/Tecnológico_de_Monterrey_old.png" alt="logo tec"></a>
         </div>
         </div>
     </footer>

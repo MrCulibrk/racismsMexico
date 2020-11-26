@@ -2,6 +2,7 @@
     include_once(__DIR__ . "/Classes/Stories.php");
 
     $story = Stories::getStoryById($_GET['story']);
+    var_dump($story);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +16,13 @@
 </head>
 <body>
     <main class="storyMain">
-        <h1 class="title"><?php echo(htmlspecialchars($story['name'])) ?></h1>
-        <p class="storySingle"><?php echo(htmlspecialchars($story['message'])) ?></p>
+        <h1 class="title"><?php echo(htmlspecialchars($story['name'])); ?></h1>
+        <?php $message = htmlspecialchars($story['message']); ?>
+        <p class="storySingle">
+            <?php echo <<<EOT
+            $message
+            EOT;
+            ?></p>
         <a id="homeBtn" href="index.php#stories">All Stories</a>
     </main>
 </body>
